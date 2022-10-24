@@ -39,9 +39,21 @@ Competencias:
 En este producto se diseño una red nueva que combina las necesidades de dos empresas que se estan uniendo en una sola. Esta red toma en cuenta los diferentes departamentos asi como una conexion con redes publicas asi como posibles puntos para poner seguridad
 ## Desarollo de API
 Competencias:
-- 
+- Javascript
+- Desarollo de rutas y respuestas de API
+- SQL
+
+Este producto sirve para poder accesar a un base de datos en un servidor por medio de requests a APIs.
 ## Analisis de datos
 Competencias:
--
+- Limpieza de datos
+- Representacion grafica de datos
+- Python
+
+En este proyecto se analizan los datos de diversas gasolineras en Mexico y se despliegan de forma grafica para un analisis mas sencillo
 ## Sistema distribuido
 Competencias:
+- Erlang
+- Pensamiento de sistemas paralelos
+
+Este proyecto simula una tienda virtual, con clientes y administradores que lleva un inventario en vivo con opciones para todos los usuarios

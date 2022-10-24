@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel = "stylesheet" href = "css/ScrappyStyles.css"> 
+
+    <meta charset = "UTF-8"
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Scrappy - Home</Title>
+
+</head>
+
+<body class = "main" style="background-image: url('imgs/BGS.jpg');">
+    <div class = "center">
+    <div class = "Ternium-logo"> 
+        <img src="imgs/TerniumLogo.png" height = "50px" width = "150px">
+    </div> 
+        <h1> Iniciar sesión </h1>
+        <form action="/login"method ="POST">
+            <div class = "txt_field">
+                <input type = "text" required name="user">
+                <span></span>
+                <label>usuario</Label>
+            </div>
+            <div class = "txt_field">
+                <input type = "password" required name="password">
+                <span></span>
+                <label>contraseña</Label>
+            </div>
+            <a><input type = "submit" value= "Ingresar"></a> 
+            <p> </p>
+        </form>
+    </div> 
+</body>
+
+

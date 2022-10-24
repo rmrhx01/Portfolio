@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "css/PerfilStyles.css"> 
+    <link rel = "stylesheet" href = "css/leadstyle.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <meta charset = "UTF-8"
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Scrappy - Perfil</Title>
+
+</head>
+
+    <nav class="navbar navbar-dark navbar-expand-lg navbar-custom">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon">
+                <i class="fa fa-navicon" style="color:#fff; font-size:28px;"></i>
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav mr-auto">
+            <li class="reactivebutton">
+                <a class="nav-link" href="/">Perfil</a>
+            </li>
+            <li class="reactivebutton" >
+                <a class="nav-link" href="/examenes">Examenes</a>
+            </li>
+            <li class="reactivebutton" >
+                <a class="nav-link" href="/juego">Juego</a>
+            </li>
+            <li class="reactivebutton">
+                <a class="nav-link" href="/tablero">Leaderboard</a>
+            </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="reactivebutton">
+                    <a class="nav-link" href="/logout">Log Out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+<body style="background-image: url('imgs/BGS.jpg');">
+
+    <script>
+        let h = new Headers(); 
+        h.append('auth_key', '<%=token%>');
+        const apisemana = "https://chatarrap-api.herokuapp.com/attempts/scoresWeek";
+        const apimes = "https://chatarrap-api.herokuapp.com/attempts/scores";
+        const apitodo = "https://chatarrap-api.herokuapp.com/attempts/scoresPast";
+
+        async function getScores(){
+            const semana = await fetch(apisemana, {
+                method: 'GET',
+                headers: h,
+            });
+            const scoreSemana = await semana.json();
+            const mes = await fetch(apimes, {
+                method: 'GET',
+                headers: h,
+            });
+            const scoremes = await mes.json();
+            const todo = await fetch(apitodo, {
+                method: 'GET',
+                headers: h,
+            });
+            const scoretodo = await todo.json();
+            var i;
+            var x;
+            if(scoreSemana.length < 5){
+                x = scoreSemana.length;
+            }else{
+                x = 5;
+            }
+            for(i = 0; i<x; i++){
+                document.getElementById("semanal"+(1+i)).textContent = scoreSemana[i].username;
+                document.getElementById("psemanal"+(1+i)).textContent = scoreSemana[i].score;
+                console.log("hi");
+            }
+            var j;
+            var y;
+            if(scoremes.length < 5){
+                y = scoremes.length;
+            }else{
+                y = 5;
+            }
+            for(j = 0; j<y; j++){
+                document.getElementById("mes"+(1+j)).textContent = scoremes[j].username;
+                document.getElementById("pmes"+(1+j)).textContent = scoremes[j].score;
+                console.log("he");
+            }
+            var k;
+            var z;
+            if(scoretodo.length < 5){
+                z = scoretodo.length;
+            }else{
+                z = 5;
+            }
+            for(k = 0; k<z; k++){
+                document.getElementById("todo"+(1+k)).textContent = scoretodo[k].username;
+                document.getElementById("ptodo"+(1+k)).textContent = scoretodo[k].score;
+                console.log("ho");
+            }
+        }
+        getScores();
+    </script>
+<h1 style="margin-top: 2cm; text-align: center; color: white;">Tablero de posiciones</h1>
+<div class="wrapper">
+    <div class="lboard_section">
+        <div class="lboard_tabs">
+            <div class="tabs">
+                <ul>
+                    <li class="inicial" data-li="Semanal">Semanal</li>
+                    <li data-li="Mensual">Mensual</li>
+                    <li data-li="Anual">Anual</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="lboard_wrap">
+            <div class="lboard_item Semanal" style="display: block;">
+                <div class="lboard_mem">
+                    <div class="img">
+                        <img src="https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png" alt="picture_1">
+                    </div>
+                    <div class="name_bar">
+                        <p id="semanal1"><span>1. </span>Puedes Ser Tú!</p>
+                        <div class="bar_wrap">
+                            <div class="inner_bar" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div id="psemanal1" class="points">
+                        
+                    </div>
+                </div>
+                <div class="lboard_mem">
+                    <div class="img">
+                        <img src="https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png" alt="picture_2">
+                    </div>
+                    <div class="name_bar">
+                        <p id="semanal2"><span>2. </span>Puedes Ser Tú!</p>
+                        <div class="bar_wrap">
+                            <div class="inner_bar" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div id="psemanal2" class="points">
+                        
+                    </div>
+                </div>
+                <div class="lboard_mem">
+                    <div class="img">
+                        <img src="https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png" alt="picture_3">
+                    </div>
+                    <div class="name_bar">
+                        <p id="semanal3"><span>3. </span>Puedes Ser Tú!</p>
+                        <div class="bar_wrap">
+                            <div class="inner_bar" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    <div id="psemanal3" class="points">
+                        
+                    </div>
+                </div>
+                <div class="lboard_mem">
+                    <div class="img">
+                        <img src="https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png" alt="picture_4">
+                    </div>
+                    <div class="name_bar">
+                        <p id="semanal4"><span>4. </span>Puedes Ser Tú!</p>
+                        <div class="bar_wrap">
+                            <div class="inner_bar" style="width: 30%;"></div>
+                        </div>
+                    </div>
+                    <div id="psemanal4" class="points">
+                        
+                    </div>
+                </div>
+                <div class="lboard_mem">
+                    <div class="img">
+                        <img src="https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png" alt="picture_5">
+                    </div>
+                    <div class="name_bar">
+                        <p id="semanal5"><span>5. </span>Puedes Ser Tú!</p>
+                        <div class="bar_wrap">
+                            <div class="inner_bar" style="width: 10%;"></div>
+                        </div>
+                    </div>
+                    <div id="psemanal5" class="points">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="lboard_item Mensual" style="display: none;">
+                <div class="lboard_mem">
+                    <div class="img">
+                        <img src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" alt="picture_1">
+                    </div>
+                    <div class="name_bar">
+                        <p id="mes1"><span>1. </span>Puedes Ser Tú!</p>
+                        <div class="bar_wrap">
+                            <div class="inner_bar" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div id="pmes1" class="points">
+                        
+                    </div>
+                </div>
+                <div class="lboard_mem">
+                    <div class="img">
+                        <img src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" alt="picture_2">
+                    </div>
+                    <div id="mes2" class="name_bar">
+                        <p><span>2. </span>Puedes Ser Tú!</p>
+                        <div class="bar_wrap">
+                            <div class="inner_bar" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div id="pmes2" class="points">
+                        
+                    </div>
+                </div>
+                <div class="lboard_mem">
+                    <div class="img">
+                        <img src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" alt="picture_3">
+                    </div>
+                    <div class="name_bar">
+                        <p id="mes3"><span>3. </span>Puedes Ser Tú!</p>
+                        <div class="bar_wrap">
+                            <div class="inner_bar" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    <div id="pmes3" class="points">
+                        
+                    </div>
+                </div>
+                <div class="lboard_mem">
+                    <div class="img">
+                        <img src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" alt="picture_4">
+                    </div>
+                    <div class="name_bar">
+                        <p id="mes4"><span>4. </span>Puedes Ser Tú!</p>
+                        <div class="bar_wrap">
+                            <div class="inner_bar" style="width: 30%;"></div>
+                        </div>
+                    </div>
+                    <div id="pmes4" class="points">
+                      
+                    </div>
+                </div>
+                <div class="lboard_mem">
+                    <div class="img">
+                        <img src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" alt="picture_5">
+                    </div>
+                    <div class="name_bar">
+                        <p id="mes5"><span>5. </span>Puedes Ser Tú!</p>
+                        <div class="bar_wrap">
+                            <div class="inner_bar" style="width: 10%;"></div>
+                        </div>
+                    </div>
+                    <div id="pmes5" class="points">
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="lboard_item Anual" style="display: none;">
+                <div class="lboard_mem">
+                    <div class="img">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png" alt="picture_1">
+                    </div>
+                    <div class="name_bar">
+                        <p id="todo1"><span>1. </span>Puedes Ser Tú!</p>
+                        <div class="bar_wrap">
+                            <div class="inner_bar" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div id="ptodo1" class="points">
+                        
+                    </div>
+                </div>
+                <div class="lboard_mem">
+                    <div class="img">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png" alt="picture_2">
+                    </div>
+                    <div class="name_bar">
+                        <p id="todo2"><span>2. </span>Puedes Ser Tú!</p>
+                        <div class="bar_wrap">
+                            <div class="inner_bar" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div id="ptodo2" class="points">
+                        
+                    </div>
+                </div>
+                <div class="lboard_mem">
+                    <div class="img">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png" alt="picture_3">
+                    </div>
+                    <div class="name_bar">
+                        <p id="todo3"><span>3. </span>Puedes Ser Tú!</p>
+                        <div class="bar_wrap">
+                            <div class="inner_bar" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    <div id="ptodo3" class="points">
+                        
+                    </div>
+                </div>
+                <div class="lboard_mem">
+                    <div class="img">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png" alt="picture_4">
+                    </div>
+                    <div class="name_bar">
+                        <p id="todo4"><span>4. </span>Puedes Ser Tú!</p>
+                        <div class="bar_wrap">
+                            <div class="inner_bar" style="width: 30%;"></div>
+                        </div>
+                    </div>
+                    <div id="ptodo4" class="points">
+                        
+                    </div>
+                </div>
+                <div class="lboard_mem">
+                    <div class="img">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png" alt="picture_5">
+                    </div>
+                    <div class="name_bar">
+                        <p id="todo5"><span>5. </span>Puedes Ser Tú!</p>
+                        <div class="bar_wrap">
+                            <div class="inner_bar" style="width: 10%;"></div>
+                        </div>
+                    </div>
+                    <div id="ptodo5" class="points">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/leaderscript.js"></script>
+</body>
+</html>

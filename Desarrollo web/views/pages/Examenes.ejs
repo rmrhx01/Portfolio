@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel = "stylesheet" href = "css/PerfilStyles.css"> 
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <script type="text/javascript">
+        window.onload = function () {
+          var chart = new CanvasJS.Chart("chartContainer",
+          {
+      
+            title:{
+            text: "Calificaciones-2021"
+            },
+             data: [
+            {
+              type: "line",
+      
+              dataPoints: [
+              { x: new Date(2021, 00, 1), y: 70 },
+              { x: new Date(2021, 01, 1), y: 80 },
+              { x: new Date(2021, 02, 1), y: 70 },
+              { x: new Date(2021, 03, 1), y: 70 },
+              { x: new Date(2021, 04, 1), y: 75 },
+              { x: new Date(2021, 05, 1), y: 90 },
+              { x: new Date(2021, 06, 1), y: 90 },
+              { x: new Date(2021, 07, 1), y: 85 },
+              { x: new Date(2021, 08, 1), y: 90 },
+              { x: new Date(2021, 09, 1), y: 90 },
+              { x: new Date(2021, 10, 1), y: 90 },
+              { x: new Date(2021, 11, 1), y: 80 }
+              ]
+            }
+            ]
+          });
+      
+      
+          chart.render();
+        }
+        </script>
+       <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <title>Examenes</title>
+</head>
+
+<body class = "main" style="background-image: url('imgs/BGS.jpg');">
+  <script>
+    let h = new Headers(); 
+    h.append('auth_key', '<%=token%>' ); 
+    const api_url = "https://chatarrap-api.herokuapp.com/exams/available/<%=username%>"; 
+
+    async function getData(){
+      const response = await fetch(api_url, {
+          method: 'GET', 
+          headers: h,
+      }); 
+      const data = await response.json();
+      var i ;
+      for(i = 0; i< data.length; i++){
+        let newCent = document.createElement('div' + i);
+        newCent.className = "row justify-content-md-center";
+        newCent.id ="div"+i;
+        let newCont = document.createElement('div');
+        newCont.className = "col-sm-3";
+        let newExam = document.createElement('div');
+        newExam.className = "card text-center";
+        let newBod = document.createElement('div');
+        newBod.className = "card-body";
+        let newTitle = document.createElement('h5');
+        newTitle.className = "card-title";
+        newTitle.textContent = data[i].examName;
+        let newTxt = document.createElement('p');
+        newTxt.className ="card-text";
+        newTxt.textContent = data[i].description;
+        let newBtn = document.createElement('a');
+        newBtn.className ="btn btn-success";
+        newBtn.href= "#";
+        newBtn.textContent = "Realizar";
+        console.log("hi");
+        if(i === 0 || i%2 === 0){
+          document.getElementById("exams").append(newCent);
+          newCent.append(newCont);
+          newCont.append(newExam);
+          newExam.append(newBod);
+          newBod.append(newTitle);
+          newBod.append(newTxt);
+          newBod.append(newBtn);
+        }else{
+          document.getElementById("div"+(i-1)).append(newCont);
+          newCont.append(newExam);
+          newExam.append(newBod);
+          newBod.append(newTitle);
+          newBod.append(newTxt);
+          newBod.append(newBtn);
+        }
+        
+      }
+    }
+    getData();
+  </script>
+
+  <nav class="navbar navbar-dark navbar-expand-lg navbar-custom">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon">
+            <i class="fa fa-navicon" style="color:#fff; font-size:28px;"></i>
+        </span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav mr-auto">
+        <li class="reactivebutton">
+            <a class="nav-link" href="/">Perfil</a>
+        </li>
+        <li class="reactivebutton" >
+            <a class="nav-link" href="/examenes">Examenes</a>
+        </li>
+        <li class="reactivebutton" >
+            <a class="nav-link" href="/juego">Juego</a>
+        </li>
+        <li class="reactivebutton">
+            <a class="nav-link" href="/tablero">Leaderboard</a>
+        </li>
+        </ul>
+        <ul class="navbar-nav">
+            <li class="reactivebutton">
+                <a class="nav-link" href="/logout">Log Out</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
+    
+    <h4 style="text-align: center; margin-top: 50px;">Examenes Pendientes</h4>
+    <div class="container-fluid" id="exams">
+    </div>
+    <h4 style="text-align: center; margin-top: 40px;">Calificaciones</h4>
+    <div id="chartContainer" style="height: 300px; width: 50%; margin-left: 25%;">
+    </div>
+    
+</body>
+</html>

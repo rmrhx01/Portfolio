@@ -7,8 +7,8 @@
 - Diseño de redes
 - Desarrollo de API
 - Analisis de datos
-- Sistema distribuido
-- 
+- Sistemas distribuidos
+- Algoritmos avanzados con interfaz grafica
 ## Introduccion
 Estudiante de Ingeniería en Tecnologías Computacionales altamente motivado y apasionado por la tecnología con un fuerte compromiso de aprendizaje y desarrollo. Con sólidos conocimientos en programación, administración de sistemas y ciberseguridad, busco oportunidades que me permitan aplicar y ampliar mis habilidades mientras contribuyó de manera efectiva a proyectos desafiantes. Destaco por mi capacidad de resolución de problemas, adaptabilidad y colaboración en equipos interdisciplinarios. Busco la oportunidad de adquirir experiencia práctica y crecer profesionalmente en el campo de la ingeniería en sistemas.
 En este portafolio busco plasmar algunos proyectos importantes que representan diversas areas en las que me he desempeñado dentro de la ingenieria en sistemas.
@@ -54,7 +54,7 @@ Competencias:
 - Python
 
 En este proyecto se analizan los datos de diversas gasolineras en Mexico y se despliegan de forma grafica para un analisis mas sencillo.
-## Sistema distribuido
+## Sistemas distribuidos
 Competencias:
 - Erlang
 - Pensamiento de sistemas paralelos

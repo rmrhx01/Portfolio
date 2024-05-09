@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="helloapplication.HelloController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="26.0" prefWidth="800.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onOpenFileClick" text="Open" />
+              <MenuItem mnemonicParsing="false" onAction="#onSaveFileClick" text="Save" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onDeleteNodeClick" text="DeleteNode" />
+                  <MenuItem mnemonicParsing="false" onAction="#onEditNodeClick" text="Edit Node" />
+                  <MenuItem mnemonicParsing="false" onAction="#onAddNodeClick" text="Add Node" />
+                  <MenuItem mnemonicParsing="false" onAction="#onDeleteLinkClick" text="Delete Link" />
+                  <MenuItem mnemonicParsing="false" onAction="#onAddLinkClick" text="Add Link" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Do">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#onShortestRouteClick" text="Shortest Route" />
+                  <MenuItem mnemonicParsing="false" onAction="#onMSTClick" text="Cable Disposition" />
+                  <MenuItem mnemonicParsing="false" onAction="#onMaxFluxClick" text="Max Flux" />
+                  <MenuItem mnemonicParsing="false" onAction="#onCentralsClick" text="Centrals" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="View">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onShowGraphClick" text="Counties" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="anchorPane" layoutY="28.0" prefHeight="470.0" prefWidth="700.0" />
+   </children>
+</AnchorPane>

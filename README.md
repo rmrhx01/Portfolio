@@ -11,6 +11,7 @@
 - 
 ## Introduccion
 Estudiante de Ingeniería en Tecnologías Computacionales altamente motivado y apasionado por la tecnología con un fuerte compromiso de aprendizaje y desarrollo. Con sólidos conocimientos en programación, administración de sistemas y ciberseguridad, busco oportunidades que me permitan aplicar y ampliar mis habilidades mientras contribuyó de manera efectiva a proyectos desafiantes. Destaco por mi capacidad de resolución de problemas, adaptabilidad y colaboración en equipos interdisciplinarios. Busco la oportunidad de adquirir experiencia práctica y crecer profesionalmente en el campo de la ingeniería en sistemas.
+En este portafolio busco plasmar algunos proyectos importantes que representan diversas areas en las que me he desempeñado dentro de la ingenieria en sistemas.
 ## Datos personales
 - Roberto Miguel Rodriguez Hermann
 - Alumno del Instituto Tecnologico de Estudios Superiores de Monterrey

@@ -8,18 +8,25 @@
 - API Development  
 - Data Analysis  
 - Distributed Systems  
-- Advanced Algorithms with Graphical Interface  
+- Advanced Algorithms with Graphical Interface
+- Discord Bot
 
 ## Introduction  
-Highly motivated Computational Technologies Engineering student with a strong passion for technology and a commitment to learning and growth. With solid knowledge in programming, system administration, and cybersecurity, I am seeking opportunities to apply and expand my skills while contributing effectively to challenging projects. I excel at problem-solving, adaptability, and collaboration in interdisciplinary teams. I aim to gain practical experience and grow professionally in the field of systems engineering.  
+Motivated and passionate Computational Technologies Engineering student with a strong foundation in programming, system administration, and data analysis. I aspire to:
+- Contribute to backend development and machine learning projects, focusing on scalable and efficient solutions.
+- Apply and expand my technical expertise in challenging and impactful environments.
+- Build innovative systems that address real-world problems.
+Known for:
+- Strong problem-solving skills and adaptability.
+- Effective collaboration in interdisciplinary teams.
+- A commitment to continuous learning and professional growth.
 
-This portfolio showcases key projects that represent various areas I have worked on within the field of systems engineering.  
+This portfolio showcases key projects that represent various areas I have worked on within the field of computer engineering.  
 
 ## Personal Information  
 - **Name:** Roberto Miguel Rodriguez Hermann  
-- **Institution:** Instituto Tecnológico de Estudios Superiores de Monterrey  
-- **Program:** 7th-semester Computational Technologies Engineering student  
-- **ID:** A00829553  
+- **School:** Instituto Tecnológico de Estudios Superiores de Monterrey  
+- **Program:** 7th-semester Computer Engineering student  
 - **Email:** rmrhx01@gmail.com  
 
 ## Web Development  

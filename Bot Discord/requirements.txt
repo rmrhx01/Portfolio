@@ -1,0 +1,6 @@
+python-dotenv
+youtube_dl
+youtube-search-python
+PyNaCl
+spotipy
+git+https://github.com/Pycord-Development/pycord

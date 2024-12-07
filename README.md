@@ -1,77 +1,87 @@
-# Portfolio
+# Portfolio  
 
-## Indice
-- Datos personales
-- Desarrollo web
-- Desarrollo de videojuegos
-- Diseño de redes
-- Desarrollo de API
-- Analisis de datos
-- Sistemas distribuidos
-- Algoritmos avanzados con interfaz grafica
-## Introduccion
-Estudiante de Ingeniería en Tecnologías Computacionales altamente motivado y apasionado por la tecnología con un fuerte compromiso de aprendizaje y desarrollo. Con sólidos conocimientos en programación, administración de sistemas y ciberseguridad, busco oportunidades que me permitan aplicar y ampliar mis habilidades mientras contribuyó de manera efectiva a proyectos desafiantes. Destaco por mi capacidad de resolución de problemas, adaptabilidad y colaboración en equipos interdisciplinarios. Busco la oportunidad de adquirir experiencia práctica y crecer profesionalmente en el campo de la ingeniería en sistemas.
-En este portafolio busco plasmar algunos proyectos importantes que representan diversas areas en las que me he desempeñado dentro de la ingenieria en sistemas.
-## Datos personales
-- Roberto Miguel Rodriguez Hermann
-- Alumno del Instituto Tecnologico de Estudios Superiores de Monterrey
-- Estudiante de Ingenieria en Teconologias Computacionales de septimo semestre
-- Matricula: A00829553
-- Correo: rmrhx01@gmail.com
-## Desarollo web
-Competencias:
-- HTML
-- JavaScript
-- SQL
+## Index  
+- Personal Information  
+- Web Development  
+- Video Game Development  
+- Network Design  
+- API Development  
+- Data Analysis  
+- Distributed Systems  
+- Advanced Algorithms with Graphical Interface  
 
-En este proyecto se diseño y desarollo una pagina web con el proposito de poder registrar y validar usuarios para el uso del material de capacitacion, asi como administradores que pudieran monitorear el avance y desempeño de aquellos que estan estudiando el material.
-Con este proyecto se ve una pagina funcional con un frontend y un backend adecuados para los requisitos del proyecto.
-## Desarollo de videojuegos
-Competencias:
-- C#
-- Programacion orientada a objetos
-- Desarollo en Unity
+## Introduction  
+Highly motivated Computational Technologies Engineering student with a strong passion for technology and a commitment to learning and growth. With solid knowledge in programming, system administration, and cybersecurity, I am seeking opportunities to apply and expand my skills while contributing effectively to challenging projects. I excel at problem-solving, adaptability, and collaboration in interdisciplinary teams. I aim to gain practical experience and grow professionally in the field of systems engineering.  
 
-Este proyecto es una capacitacion dinamica para la identificacion de materiales en buen y en mal estado, hecho en colaboracion con Ternium. Gracias a esto se practican las habilidades necesarias para el desarrollo de videojuegos.
-## Diseño de redes
-Competencias:
-- Diseño de redes privadas
-- Configuracion de dispositivos
-- Diseño de redes seguras
+This portfolio showcases key projects that represent various areas I have worked on within the field of systems engineering.  
 
-En este producto se diseño una red nueva que combina las necesidades de dos empresas que se estan uniendo en una sola. Esta red toma en cuenta los diferentes departamentos asi como una conexion con redes publicas asi como posibles puntos para poner seguridad.
-## Desarollo de API
-Competencias:
-- Javascript
-- Desarollo de rutas y respuestas de API
-- SQL
+## Personal Information  
+- **Name:** Roberto Miguel Rodriguez Hermann  
+- **Institution:** Instituto Tecnológico de Estudios Superiores de Monterrey  
+- **Program:** 7th-semester Computational Technologies Engineering student  
+- **ID:** A00829553  
+- **Email:** rmrhx01@gmail.com  
 
-Este producto sirve para poder accesar a un base de datos en un servidor por medio de requests a APIs.
-## Analisis de datos
-Competencias:
-- Limpieza de datos
-- Representacion grafica de datos
-- Python
+## Web Development  
+**Skills:**  
+- HTML  
+- JavaScript  
+- SQL  
 
-En este proyecto se analizan los datos de diversas gasolineras en Mexico y se despliegan de forma grafica para un analisis mas sencillo.
-## Sistemas distribuidos
-Competencias:
-- Erlang
-- Pensamiento de sistemas paralelos
+This project involved designing and developing a web page for user registration and validation for training material access. It also included functionality for administrators to monitor progress and performance of users studying the material. The result is a functional page with a frontend and backend tailored to project requirements.  
 
-Este proyecto simula una tienda virtual, con clientes y administradores que lleva un inventario en vivo con opciones para todos los usuarios.
-## Algoritmos avanzados con interfaz grafica
-Competencias:
-- Algoritmos avanzados(Dijkstra, Floyd–Warshall, entre otros)
-- Desarrollo de interfaz grafica
-- Java
+## Video Game Development  
+**Skills:**  
+- C#  
+- Object-Oriented Programming  
+- Development in Unity  
 
-Este proyecto hace uso de una interfaz grafica para mostrar el comportamiento de diversos algoritmos(especificamente algoritmos sobre grafos), para la solucion de problemas en la industria de telecomunicacion.
-## Bot Discord
-Competencias:
-- Integracion de APIs(Spotify,Discord,Youtube)
-- Programacion concurrente
-- Python
+This project, in collaboration with Ternium, provided dynamic training for identifying materials in good and poor conditions. It served as a practice of essential skills required for video game development.  
 
-Este proyecto se enfoca en un bot de Discord que recibe comandos para poner musica desde un link de Youtube o de Spotify ademas de otras comandos variados.
+## Network Design  
+**Skills:**  
+- Private network design  
+- Device configuration  
+- Secure network design  
+
+This project involved designing a new network that combined the needs of two merging companies. The network considered different departments, connections to public networks, and potential security points.  
+
+## API Development  
+**Skills:**  
+- JavaScript  
+- API route and response development  
+- SQL  
+
+This product enables access to a database on a server through API requests.  
+
+## Data Analysis  
+**Skills:**  
+- Data cleaning  
+- Graphical data representation  
+- Python  
+
+This project involved analyzing data from various gas stations in Mexico and displaying it graphically for easier analysis.  
+
+## Distributed Systems  
+**Skills:**  
+- Erlang  
+- Parallel system thinking  
+
+This project simulates a virtual store with live inventory management for customers and administrators, offering options for all users.  
+
+## Advanced Algorithms with Graphical Interface  
+**Skills:**  
+- Advanced algorithms (Dijkstra, Floyd–Warshall, among others)  
+- Graphical interface development  
+- Java  
+
+This project utilizes a graphical interface to demonstrate the behavior of various algorithms (specifically graph algorithms) for solving problems in the telecommunications industry.  
+
+## Discord Bot  
+**Skills:**  
+- API integrations (Spotify, Discord, YouTube)  
+- Concurrent programming  
+- Python  
+
+This project focuses on a Discord bot capable of receiving commands to play music from YouTube or Spotify links, as well as other miscellaneous commands.  
 

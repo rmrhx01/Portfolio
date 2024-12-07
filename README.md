@@ -15,7 +15,7 @@ En este portafolio busco plasmar algunos proyectos importantes que representan d
 ## Datos personales
 - Roberto Miguel Rodriguez Hermann
 - Alumno del Instituto Tecnologico de Estudios Superiores de Monterrey
-- Estudiante de Ingenieria en Teconologias Computacionales de quinto semestre
+- Estudiante de Ingenieria en Teconologias Computacionales de septimo semestre
 - Matricula: A00829553
 - Correo: rmrhx01@gmail.com
 ## Desarollo web
@@ -67,3 +67,11 @@ Competencias:
 - Java
 
 Este proyecto hace uso de una interfaz grafica para mostrar el comportamiento de diversos algoritmos(especificamente algoritmos sobre grafos), para la solucion de problemas en la industria de telecomunicacion.
+## Bot Discord
+Competencias:
+- Integracion de APIs(Spotify,Discord,Youtube)
+- Programacion concurrente
+- Python
+
+Este proyecto se enfoca en un bot de Discord que recibe comandos para poner musica desde un link de Youtube o de Spotify ademas de otras comandos variados.
+

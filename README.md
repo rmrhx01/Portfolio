@@ -26,7 +26,7 @@ This portfolio showcases key projects that represent various areas I have worked
 ## Personal Information  
 - **Name:** Roberto Miguel Rodriguez Hermann  
 - **School:** Instituto Tecnológico de Estudios Superiores de Monterrey  
-- **Program:** 7th-semester Computer Engineering student  
+- **Linkedin:** [https://www.linkedin.com/in/rrodriguezh/](https://www.linkedin.com/in/rrodriguezh/)
 - **Email:** rmrhx01@gmail.com  
 
 ## Web Development  

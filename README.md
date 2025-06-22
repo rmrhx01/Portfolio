@@ -12,7 +12,7 @@
 - Discord Bot
 
 ## Introduction  
-Motivated and passionate Computational Technologies Engineering student with a strong foundation in programming, system administration, and data analysis. I aspire to:
+Motivated and passionate Computational Technologies Engineer with a strong foundation in programming, system administration, and data analysis. I aspire to:
 - Contribute to backend development and machine learning projects, focusing on scalable and efficient solutions.
 - Apply and expand my technical expertise in challenging and impactful environments.
 - Build innovative systems that address real-world problems.
